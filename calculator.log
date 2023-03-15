@@ -270,3 +270,5 @@
 2022-04-15 12:41:52.772 [main] INFO  calculator.Calculator - [RESULT - SQ ROOT] - 4.898979485566356
 2022-04-15 12:41:58.232 [main] INFO  calculator.Calculator - [POWER - -23.0 RAISED TO] 25.0
 2022-04-15 12:41:58.233 [main] INFO  calculator.Calculator - [RESULT - POWER] - -1.1045767571919546E34
+2023-03-15 16:21:18.005 [main] INFO  calculator.Calculator - [FACTORIAL] - 2
+2023-03-15 16:21:18.007 [main] INFO  calculator.Calculator - [RESULT - FACTORIAL] - 2
