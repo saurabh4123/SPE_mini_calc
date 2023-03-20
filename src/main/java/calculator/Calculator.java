@@ -26,10 +26,10 @@ public class Calculator {
         do {
             //System.out.println("Calculator-DevOps, Choose to perform operation");
             System.out.print(
-                "Enter 1 to find Factorial\n" +
-                "Enter 2 to find Square Root\n" +
-                "Enter 3 to find Power\n" +
-                "Enter 4 to find Natural Logarithm\n" +
+                "Enter 1 to find Square Root\n" +
+                "Enter 2 to find Factorial\n" +
+                "Enter 3 to find Natural Log\n" +
+                "Enter 4 to find Power\n" +
                 "Enter any other input to Exit\n" +
                 "Enter your choice: "
             );
@@ -40,37 +40,13 @@ public class Calculator {
                 choice = scanner.nextInt();
             }
             catch (InputMismatchException error) {
-                System.out.println("Exiting....");
+                System.out.println("Thanks for your time!!Exiting now....");
                 scanner.close();
                 return;
             }
 
             switch (choice) {
-                case 1:
-                    // find factorial
-                    i_number1 = -1;
-
-                    // Keep executing do-while loop till user enters a non-negative integer
-                    while (i_number1 < 0) {
-                        try {
-                            System.out.print("Enter a non-negative integer : ");
-                            i_number1 = scanner.nextInt();
-
-                            if (i_number1 < 0)
-                                System.out.println("Factorial is only applicable for non-negative integers");
-                            else
-                                System.out.println("Factorial of " + i_number1 + " is: " + calculator.factorial(i_number1) + "\n");
-                        }
-                        // To handle cases where user enters non-numeric input
-                        catch (InputMismatchException e) {
-                            System.out.println("Factorial is only applicable for non-negative integers");
-                        }
-                        scanner.nextLine(); // Clear the buffer to receive new input
-                    }
-
-                    break;
-
-                case 2:
+                case 1:                    
                     // find square root
                     d_number1 = -1;
 
@@ -91,10 +67,51 @@ public class Calculator {
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
-
                     break;
+                case 2:                    
+                    // find factorial
+                    i_number1 = -1;
 
+                    // Keep executing do-while loop till user enters a non-negative integer
+                    while (i_number1 < 0) {
+                        try {
+                            System.out.print("Enter a non-negative integer : ");
+                            i_number1 = scanner.nextInt();
+
+                            if (i_number1 < 0)
+                                System.out.println("Factorial is only applicable for non-negative integers");
+                            else
+                                System.out.println("Factorial of " + i_number1 + " is: " + calculator.factorial(i_number1) + "\n");
+                        }
+                        // To handle cases where user enters non-numeric input
+                        catch (InputMismatchException e) {
+                            System.out.println("Factorial is only applicable for non-negative integers");
+                        }
+                        scanner.nextLine(); // Clear the buffer to receive new input
+                    }
+                    break;                  
                 case 3:
+                    // find natural log
+                    d_number1 = 0;
+                    // Keep executing do-while loop till user enters a positive number
+                    while (d_number1 <= 0) {
+                        try {
+                            System.out.print("Enter a positive number: ");
+                            d_number1 = scanner.nextDouble();
+
+                            if (d_number1 <= 0)
+                                System.out.println("Natural Logarithm is only applicable for positive numbers");
+                            else
+                                System.out.println("Natural Logarithm of " + d_number1 + " is: " + calculator.naturalLog(d_number1) + "\n");
+                        }
+                        // To handle cases where user enters non-numeric input
+                        catch (InputMismatchException e) {
+                            System.out.println("Natural Logarithm is only applicable for positive numbers");
+                        }
+                        scanner.nextLine(); // Clear the buffer to receive new input
+                    }
+                    break;                   
+                case 4:
                     // find power
                     d_number1 = Double.POSITIVE_INFINITY; d_number2 = Double.POSITIVE_INFINITY;
                     while (d_number1 == Double.POSITIVE_INFINITY) {
@@ -119,37 +136,11 @@ public class Calculator {
                         }
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
-
                     System.out.println(d_number1 + " raised to " + d_number2 + " is: " + calculator.power(d_number1, d_number2));
                     System.out.println("\n");
-                    break;
-
-                case 4:
-                    // find natural log
-                    d_number1 = 0;
-
-                    // Keep executing do-while loop till user enters a positive number
-                    while (d_number1 <= 0) {
-                        try {
-                            System.out.print("Enter a positive number: ");
-                            d_number1 = scanner.nextDouble();
-
-                            if (d_number1 <= 0)
-                                System.out.println("Natural Logarithm is only applicable for positive numbers");
-                            else
-                                System.out.println("Natural Logarithm of " + d_number1 + " is: " + calculator.naturalLog(d_number1) + "\n");
-                        }
-                        // To handle cases where user enters non-numeric input
-                        catch (InputMismatchException e) {
-                            System.out.println("Natural Logarithm is only applicable for positive numbers");
-                        }
-                        scanner.nextLine(); // Clear the buffer to receive new input
-                    }
-
-                    break;
-
+                    break;                
                 default:
-                    System.out.println("Exiting....");
+                    System.out.println("Thanks for your time!!Exiting now....");
                     scanner.close();
                     return;
             }
