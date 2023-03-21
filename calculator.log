@@ -1,4 +1,2 @@
 2023-03-21 23:57:19.588 [main] INFO  calculator.Calculator - Sq root 89.0
 2023-03-21 23:57:19.589 [main] INFO  calculator.Calculator - Result - sq root= 9.433981132056603
-2023-03-21 23:57:46.606 [main] INFO  calculator.Calculator - Factorial - 4
-2023-03-21 23:57:46.607 [main] INFO  calculator.Calculator - Result - Factorial= 24
