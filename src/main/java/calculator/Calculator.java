@@ -20,7 +20,7 @@ public class Calculator {
                 "Enter 2 to find Factorial\n " +
                 "Enter 3 to find Natural Log\n " +
                 "Enter 4 to find Power\n " +
-                "Enter any other input to Exit\n " +
+                "Enter any other input to exit\n " +
                 "Enter your choice: "
             );
             int choice;
