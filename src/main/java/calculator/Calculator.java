@@ -12,7 +12,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         double d_number1, d_number2;
         int i_number1;
-        System.out.println("Press Enter key to start the application\n");
+        System.out.println("Press enter key to start the application\n");
         scanner.nextLine();
         do {
             System.out.print(
